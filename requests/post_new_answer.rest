@@ -1,0 +1,8 @@
+POST http://localhost:3003/api/answers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpZCI6IjY1M2M4MzRmNGUzMjM5YjYzZWM0ODNkZSIsImlhdCI6MTY5ODQ2NDYwOCwiZXhwIjoxNjk4NDY4MjA4fQ.wkvyLesurWShUTMf1G300HVypvfFaxbSOJasrx-Oz30
+
+{
+  "content": "content",
+  "topic": "653c83fe4e3239b63ec483e5"
+}

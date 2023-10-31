@@ -1,8 +1,8 @@
-POST http://localhost:3003/api/answers
+POST http://localhost:3000/api/answers
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpZCI6IjY1M2M4MzRmNGUzMjM5YjYzZWM0ODNkZSIsImlhdCI6MTY5ODUwMTk1MCwiZXhwIjoxNjk4NTA1NTUwfQ.zZ-jselRWbflApZrO5xS7vASXJ1zWgRl5gshj0kqiSM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpZCI6IjY1NDA2ZTY5MTQ1NjJkZTJhMDlmNTUwOCIsImlhdCI6MTY5ODcyMTQxNSwiZXhwIjoxNjk4NzI1MDE1fQ.Fiw4mfrCLeCRxWC3qNldK6Gy7XpLYHWbrsoeIZKsa5s
 
 {
-  "content": "content",
-  "topic": "653c83fe4e3239b63ec483e5"
+  "content": "Ten years from now, I'll have finally achieved my lifelong dream of becoming a professional ice cream taster. My job description will include crafting new flavors, like 'Garlic Gelato' and 'Cucumber Sorbet.",
+  "topic": "6540737314562de2a09f5557"
 }

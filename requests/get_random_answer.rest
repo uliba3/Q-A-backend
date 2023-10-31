@@ -1,0 +1,1 @@
+GET http://localhost:3000/api/answers/randTopic/653d4dc30b15c3c6631cf3ce

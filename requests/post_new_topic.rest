@@ -1,7 +1,7 @@
-POST http://localhost:3003/api/topics
+POST http://localhost:3000/api/topics
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpZCI6IjY1M2M4MzRmNGUzMjM5YjYzZWM0ODNkZSIsImlhdCI6MTY5ODUwMTgyMCwiZXhwIjoxNjk4NTA1NDIwfQ.Dd3U18_B1oqBwBfbL8XLwzDc9mLoys98DDMBEyaMTSk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImEiLCJpZCI6IjY1NDA2ZTY5MTQ1NjJkZTJhMDlmNTUwOCIsImlhdCI6MTY5ODcyMTQxNSwiZXhwIjoxNjk4NzI1MDE1fQ.Fiw4mfrCLeCRxWC3qNldK6Gy7XpLYHWbrsoeIZKsa5s
 
 {
-  "title": "title"
+  "title": "Where do you see yourself in 10 years?"
 }

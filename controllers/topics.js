@@ -11,6 +11,18 @@ topicsRouter.get('/', async (request, response) => {
   response.json(topics)
 })
 
+topicsRouter.get('/rand', async (request, response) => {
+  try {
+    const count = await Topic.countDocuments(); // Get the total number of topics in the database
+    const randomIndex = Math.floor(Math.random() * count); // Generate a random index within the range of available topics
+    const randomTopic = await Topic.findOne().skip(randomIndex); // Find a random topic using the generated index
+    response.json(randomTopic); // Send the random topic as a JSON response
+  } catch (error) {
+    response.status(500).json({ error: 'An error occurred while fetching a random topic.' });
+  }
+});
+
+
 const getTokenFrom = request => {
   const authorization = request.get('authorization')
   if (authorization && authorization.startsWith('Bearer ')) {

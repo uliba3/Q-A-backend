@@ -7,6 +7,7 @@ const loginRouter = require('./controllers/login')
 const answersRouter = require('./controllers/answers')
 const topicsRouter = require('./controllers/topics')
 const usersRouter = require('./controllers/users')
+const testingRouter = require('./controllers/testing')
 const middleware = require('./utils/middleware')
 const logger = require('./utils/logger')
 const mongoose = require('mongoose')
@@ -32,11 +33,7 @@ app.use('/api/login', loginRouter)
 app.use('/api/answers', answersRouter)
 app.use('/api/topics', topicsRouter)
 app.use('/api/users', usersRouter)
-
-if (process.env.NODE_ENV === 'test') {
-  const testingRouter = require('./controllers/testing')
-  app.use('/api/testing', testingRouter)
-}
+app.use('/api/testing', testingRouter)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)

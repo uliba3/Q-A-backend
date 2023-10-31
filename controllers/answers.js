@@ -47,6 +47,29 @@ answersRouter.post('/', async (request, response, next) => {
   response.status(201).json(savedAnswer)
 })
 
+answersRouter.get('/rand', async (request, response) => {
+  try {
+    const count = await Answer.countDocuments(); // Get the total number of answers in the database
+    const randomIndex = Math.floor(Math.random() * count); // Generate a random index within the range of available answers
+    const randomAnswer = await Answer.findOne().skip(randomIndex); // Find a random answer using the generated index
+    response.json(randomAnswer); // Send the random topic as a JSON response
+  } catch (error) {
+    response.status(500).json({ error: 'An error occurred while fetching a random topic.' });
+  }
+})
+
+answersRouter.get('/randTopic/:id', async (request, response, next) => {
+  const topicId = request.params.id
+  try {
+    const count = await Answer.find({ topic: topicId }).countDocuments(); // Get the total number of topics in the database
+    const randomIndex = Math.floor(Math.random() * count); // Generate a random index within the range of available topics
+    const randomAnswer = await Answer.findOne({ topic: topicId }).skip(randomIndex); // Find a random topic using the generated index
+    response.json(randomAnswer); // Send the random topic as a JSON response
+  } catch (error) {
+    response.status(500).json({ error: 'An error occurred while fetching a random topic.' });
+  }
+})
+
 answersRouter.get('/:id', async (request, response, next) => {
   const answer = await Answer.findById(request.params.id)
   if (answer) {

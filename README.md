@@ -2,7 +2,7 @@
 
 This repository contains the backend code for QAwebapp, a full-stack web application that enables users to post answers to random questions and view responses from other users. The backend is built using Node.js and interacts with a MongoDB database to store and retrieve data. [Live demo](https://white-voice-4708.fly.dev/)
 
-![Alt Text](public\QAwebAppScreenshot.png)
+![Alt Text](public/QAwebAppScreenshot.png)
 
 ## Technologies Used
 
